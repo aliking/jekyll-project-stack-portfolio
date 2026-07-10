@@ -1,4 +1,3 @@
-@use "sass:color";
 @use "variables" as *;
 
 // ===========================
@@ -20,7 +19,7 @@
   left: 0;
   z-index: 100;
   width: $sidebar-width;
-  background: rgba($bg-deep, 0.85);
+  background: $sidebar-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +48,9 @@
 
   .sidebar-footer {
     margin-top: auto;
+    width: 100%;
+    padding: $spacing-xl;
+    position: relative;
   }
 }
 
@@ -128,7 +130,7 @@
     border-color: $accent-purple;
 
     &:hover {
-      background: color.adjust($accent-purple, $lightness: 8%);
+      background: $accent-purple-hover;
       color: $bg-deep;
       box-shadow: $glow-purple;
       transform: translateY(-2px);
@@ -141,7 +143,7 @@
     border-color: $accent-teal;
 
     &:hover {
-      background: rgba($accent-teal, 0.1);
+      background: $accent-teal-soft;
       color: $accent-teal;
       box-shadow: $glow-teal;
       transform: translateY(-2px);
@@ -153,13 +155,13 @@
 .card {
   background: $bg-card;
   border: 1px solid $border-color;
+  box-shadow: $shadow-card;
   border-radius: $radius-lg;
   padding: $spacing-xl;
-  box-shadow: $shadow-card;
   transition: border-color $transition-base, box-shadow $transition-base, transform $transition-base;
 
   &:hover {
-    border-color: rgba($accent-purple, 0.4);
+    border-color: $accent-purple-soft;
     box-shadow: $glow-purple, $shadow-card;
     transform: translateY(-3px);
   }
@@ -270,11 +272,132 @@
   a {
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-color: rgba($accent-teal, 0.4);
+    text-decoration-color: $accent-teal-soft;
 
     &:hover {
       text-decoration-color: $accent-teal;
     }
+  }
+}
+
+// ── Theme toggle ────────────────────────────────────────────
+.theme-toggle {
+  width: auto;
+  border: 1px solid $border-color;
+  background: transparent;
+  color: $text-primary;
+  border-radius: $radius-pill;
+  padding: $spacing-xs $spacing-sm;
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  transition: border-color $transition-fast, background-color $transition-fast, color $transition-fast;
+
+  &:hover {
+    border-color: $accent-purple;
+    background: $bg-card;
+  }
+}
+
+.theme-pill {
+  width: 2.5rem;
+  height: 1.25rem;
+  display: inline-flex;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+}
+
+.theme-pill-track {
+  fill: $bg-card;
+  stroke: $border-color;
+}
+
+.theme-pill-sun,
+.theme-pill-moon {
+  stroke: $text-muted;
+}
+
+.theme-pill-thumb {
+  fill: $accent-yellow;
+  transition: transform $transition-base, fill $transition-base;
+}
+
+.theme-toggle[data-resolved-theme="dark"] {
+  .theme-pill-thumb {
+    transform: translateX(32px);
+    fill: $accent-purple;
+  }
+
+  .theme-pill-moon {
+    stroke: $text-primary;
+  }
+}
+
+.theme-toggle[data-resolved-theme="light"] {
+  .theme-pill-sun {
+    stroke: $text-primary;
+  }
+}
+
+.theme-modal {
+  position: absolute;
+  left: $spacing-xl;
+  right: $spacing-xl;
+  bottom: calc(100% + #{$spacing-sm});
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  z-index: 300;
+}
+
+.theme-modal[hidden] {
+  display: none;
+}
+
+.theme-modal-title {
+  margin: 0 0 $spacing-sm;
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  font-family: $font-mono;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.theme-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: $spacing-xs;
+}
+
+.theme-option {
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: $radius-sm;
+  background: transparent;
+  color: $text-primary;
+  padding: $spacing-sm $spacing-md;
+  font-family: $font-body;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color $transition-fast, background-color $transition-fast;
+
+  &:hover {
+    border-color: $accent-teal;
+    background: $bg-card-hover;
+  }
+
+  &[aria-pressed="true"] {
+    border-color: $accent-purple;
+    background: $accent-purple-soft;
   }
 }
 
@@ -301,16 +424,11 @@
   .hero .hero-title {
     font-size: 2rem;
   }
+
 }
 
 // ── Panels ────────────────────────────────────────────────────
 .panel {
-  background: $bg-card;
-  border: 1px solid $border-color;
-  border-radius: $radius-lg;
-  padding: $spacing-xl;
-  box-shadow: $shadow-card;
-  transition: border-color $transition-base, box-shadow $transition-base, transform $transition-base;
   margin-bottom: $spacing-2xl;
 
   h3 {

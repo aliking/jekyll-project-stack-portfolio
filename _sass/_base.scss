@@ -120,14 +120,14 @@ table {
   }
 
   tr:nth-child(even) td {
-    background: rgba(255,255,255,0.02);
+    background: $row-even-bg;
   }
 }
 
 // ── Selection ────────────────────────────────────────────────
 
 ::selection {
-  background: rgba(181, 123, 238, 0.3);
+  background: $selection-bg;
   color: $text-primary;
 }
 
