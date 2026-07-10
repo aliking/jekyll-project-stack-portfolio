@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article>
+  <header class="page-header">
+    <div class="header-text-wrapper">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="page-desc" style="color: var(--text-secondary, #9898b8); font-size: 1.1rem; margin-top: 0.5rem;">{{ page.description }}</p>
+      {% endif %}
+      <div style="display:flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+        {% for tech in page.tech %}
+        <span class="tag tag-teal">{{ tech }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+  <div class="page-content">
+    {{ content }}
+  </div>
+  {% if page.link %}
+  <div style="margin-top: 2rem;">
+    <a href="{{ page.link }}" class="btn btn-outline" target="_blank" rel="noopener">View Project →</a>
+  </div>
+  {% endif %}
+</article>

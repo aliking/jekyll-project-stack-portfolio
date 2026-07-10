@@ -1,0 +1,147 @@
+@use "variables" as *;
+
+// ===========================
+// BASE STYLES
+// ===========================
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-deep;
+  color: $text-primary;
+  font-family: $font-body;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+// ── Typography ──────────────────────────────────────────────
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-primary;
+  line-height: 1.25;
+  margin-bottom: $spacing-md;
+  font-weight: 700;
+}
+
+h1 { font-size: $font-size-3xl; }
+h2 { font-size: $font-size-2xl; }
+h3 { font-size: $font-size-xl; }
+h4 { font-size: $font-size-lg; }
+
+p {
+  margin-bottom: $spacing-md;
+  color: $text-secondary;
+}
+
+a {
+  color: $accent-teal;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $accent-purple;
+  }
+}
+
+strong { color: $text-primary; }
+
+em { color: $accent-yellow; font-style: italic; }
+
+
+// ── Lists ────────────────────────────────────────────────────
+
+ul, ol {
+  padding-left: $spacing-lg;
+  margin-bottom: $spacing-md;
+  color: $text-secondary;
+
+  li {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+// ── Horizontal rule ──────────────────────────────────────────
+
+hr {
+  border: none;
+  border-top: 1px solid $border-color;
+  margin: $spacing-2xl 0;
+}
+
+// ── Blockquote ───────────────────────────────────────────────
+
+blockquote {
+  border-left: 3px solid $accent-purple;
+  padding-left: $spacing-lg;
+  margin: $spacing-lg 0;
+  color: $text-secondary;
+  font-style: italic;
+}
+
+// ── Images ───────────────────────────────────────────────────
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: $radius-md;
+}
+
+// ── Tables ───────────────────────────────────────────────────
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $spacing-lg;
+
+  th, td {
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $border-color;
+    text-align: left;
+  }
+
+  th {
+    background: $bg-card;
+    color: $accent-purple;
+    font-family: $font-mono;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  tr:nth-child(even) td {
+    background: rgba(255,255,255,0.02);
+  }
+}
+
+// ── Selection ────────────────────────────────────────────────
+
+::selection {
+  background: rgba(181, 123, 238, 0.3);
+  color: $text-primary;
+}
+
+// ── Scrollbar ────────────────────────────────────────────────
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: $bg-mid;
+}
+::-webkit-scrollbar-thumb {
+  background: $border-color;
+  border-radius: $radius-pill;
+  &:hover { background: $accent-purple; }
+}
