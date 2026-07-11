@@ -17,6 +17,8 @@
 .site-sidebar {
   position: sticky;
   left: 0;
+  top: 0;
+  height: 100vh;
   z-index: 100;
   width: $sidebar-width;
   background: $sidebar-bg;
@@ -70,42 +72,7 @@
 // ── Hero ─────────────────────────────────────────────────────
 .hero {
   padding: $spacing-3xl 0 $spacing-2xl;
-  text-align: center;
 
-  .hero-eyebrow {
-    font-family: $font-mono;
-    font-size: $font-size-sm;
-    color: $accent-teal;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: $spacing-md;
-  }
-
-  .hero-title {
-    font-size: clamp(2.2rem, 6vw, 3.5rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    margin-bottom: $spacing-lg;
-    background: linear-gradient(135deg, $text-primary 0%, $accent-purple 60%, $accent-teal 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-sub {
-    font-size: $font-size-lg;
-    color: $text-secondary;
-    max-width: 560px;
-    margin: 0 auto $spacing-2xl;
-    line-height: 1.6;
-  }
-
-  .hero-cta {
-    display: inline-flex;
-    gap: $spacing-md;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 
 // ── Buttons ──────────────────────────────────────────────────

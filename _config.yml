@@ -21,7 +21,6 @@ sass:
 
 # Plugins
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll_picture_tag
 
@@ -53,3 +52,7 @@ exclude:
   - .bundle
   - .sass-cache
   - README.md
+
+# custom
+project_asset:
+  asset_root: assets/project_media
