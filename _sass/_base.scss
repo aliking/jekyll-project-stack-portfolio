@@ -52,6 +52,11 @@ a {
   &:hover {
     color: $accent-purple;
   }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 strong { color: $text-primary; }

@@ -28,7 +28,7 @@
     <div class="tapestack">
       {% for project in all_projects %}
       <div class="tape">
-        <a href="{{ project.url | relative_url }}" style="text-decoration: none; display: block;">
+        <a {% if page.url contains project.url %}class="disabled"{% endif %} href="{{ project.url | relative_url }}" style="text-decoration: none; display: block;">
             <h3 class="title">{{ project.title }}</h3>
           </a>
         </div>
