@@ -18,27 +18,14 @@
       aria-controls="sidebar-menu-content"
       aria-expanded="false"
       aria-label="Open menu">
-      {% include sidebar_menu_icon.svg %}
+      {% include components/sidebar/menu_icon.svg %}
     </button>
   </header>
 
   <div class="sidebar-menu-content" id="sidebar-menu-content">
-    {% assign all_projects = site.projects %}
-    {% if all_projects.size > 0 %}
-    <div class="project-stack">
-      {% for project in all_projects %}
-      <div class="project-stack-item">
-        <a {% if page.url contains project.url %}class="disabled"{% endif %} href="{{ project.url | relative_url }}" style="text-decoration: none; display: block;">
-            <h3 class="title">{{ project.title }}</h3>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-    {% else %}
-    <p style="color: #9898b8; font-style: italic; margin-top: 2rem;">Projects incoming — check back soon.</p>
-    {% endif %}
+    {% include components/sidebar/project-stack.html projects=site.projects current_url=page.url %}
   </div>
-  {% include side_footer.html %}
+  {% include components/sidebar/footer.html %}
 </aside>
 
 <script>

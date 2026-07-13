@@ -1,6 +1,8 @@
 ---
 layout: project
 type: vhs
+stack_style: tape1
+stack_skew: -10 0.1
 title: "The Zombie Film After School"
 show_title: true
 

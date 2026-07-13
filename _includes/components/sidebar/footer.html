@@ -2,13 +2,13 @@
 	<div class="sidebar-footer-left">
 		<button class="btn theme-toggle" type="button" id="theme-toggle" aria-haspopup="dialog" aria-controls="theme-modal" aria-expanded="false">
 			<span class="theme-pill" aria-hidden="true">
-				{% include theme_toggle_icon.svg %}
+				{% include components/sidebar/theme_toggle_icon.svg %}
 			</span>
 		</button>
 	</div>
 
 	<div class="sidebar-footer-right">
-		{% include gallery_controls.html %}
+		{% include components/gallery/controls.html %}
 	</div>
 
 	<div class="theme-modal card" id="theme-modal" role="dialog" aria-modal="false" aria-labelledby="theme-modal-title" hidden>

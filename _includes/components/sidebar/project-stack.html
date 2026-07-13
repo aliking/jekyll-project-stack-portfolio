@@ -1,0 +1,11 @@
+{% assign stack_projects = include.projects | default: site.projects %}
+
+{% if stack_projects.size > 0 %}
+<div class="project-stack">
+  {% for project in stack_projects %}
+    {% include components/sidebar/stack-tape.html project=project current_url=include.current_url %}
+  {% endfor %}
+</div>
+{% else %}
+<p style="color: #9898b8; font-style: italic; margin-top: 2rem;">Projects incoming - check back soon.</p>
+{% endif %}

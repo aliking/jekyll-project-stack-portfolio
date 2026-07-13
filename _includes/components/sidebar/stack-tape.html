@@ -1,0 +1,18 @@
+{% assign stack_project = include.project %}
+{% assign is_current_project = false %}
+{% if include.current_url and include.current_url contains stack_project.url %}
+  {% assign is_current_project = true %}
+{% endif %}
+
+<div class="project-stack-item-row">
+  <a class="project-stack-item {% if is_current_project %}disabled{% endif %}" href="{{ stack_project.url | relative_url }}">
+    <div class="project-stack-item-art" aria-hidden="true">
+      {% include components/sidebar/tape.svg %}
+    </div>
+    <div class="project-stack-item-label" aria-hidden="true">
+      <svg viewBox="0 0 500 50" width="100%" role="presentation" focusable="false">
+        <text x="0" y="40" font-size="40" font-weight="700" textLength="100%" lengthAdjust="spacingAndGlyphs">{{ stack_project.title | upcase }}</text>
+      </svg>
+    </div>
+  </a>
+</div>
