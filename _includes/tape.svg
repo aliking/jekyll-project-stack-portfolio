@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-375.83 -543.84 1280.31 182.217" width="1280.31" height="182.217">
+    <defs>
+        <filter id="weathered-edge">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+        </filter>
+        <filter id="ink-grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="rawNoise" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 -2.5" in="rawNoise" result="grainMask" />
+            <feComposite operator="in" in="SourceGraphic" in2="grainMask" />
+        </filter>
+  </defs>
+    <rect id="shading" x="-375.83" y="-543.84" width="1280.31" height="182.217" stroke="#000" stroke-width="6px" fill="#3b3b3b"
+        rx="21" ry="21" />
+    <rect id="bg" x="-348.03" y="-540.85" width="1224.63" height="176.764"
+        fill="#252525" rx="21" ry="21" />
+    <path id="tabhole" fill="#000" d="M-243.58-455.95h63.673v78.748h-63.673z" />
+    <rect id="tab" x="-235.46" y="-433.93" width="47.428" height="59.515" fill="#2b2b2b" rx="1"
+        ry="1" />
+    <path id="midline" stroke="#000" d="m-375.146-456.012 1278.06-.984" />
+    <g filter="url(#weathered-edge)">
+    <rect id="label" x="-148.48" y="-524.14" width="962.097" height="144.125" fill="#fff" rx="9"
+        ry="9" />
+    <path id="color1" fill="#fff"  d="M106.04-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9H106.04z" transform="scale(-1 1)" />
+    <path id="color2" fill="#fff" d="M63.4-524.28h42.736v144.407H63.4z"  transform="scale(-1 1)" />
+    <path id="color3" fill="#fff" d="M21.3-524.28h42.736v144.407H21.3z"   transform="scale(-1 1)" />
+    <path id="color4" fill="#fff"  d="M770.654-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9h-33.736z" />
+    <path id="color5" fill="#fff" d="M728.006-524.28h42.736v144.407h-42.736z" />
+    <path id="color6" fill="#fff" d="M685.914-524.28h42.736v144.407h-42.736z" />
+    </g>
+    <g filter="url(#ink-grain)">
+    <rect id="bg" x="-348.03" y="-540.85" width="1224.63" height="176.764"
+        style="fill-opacity:.1;fill:#777" rx="21" ry="21" />
+    </g>
+</svg>

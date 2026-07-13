@@ -25,9 +25,9 @@
   <div class="sidebar-menu-content" id="sidebar-menu-content">
     {% assign all_projects = site.projects %}
     {% if all_projects.size > 0 %}
-    <div class="tapestack">
+    <div class="project-stack">
       {% for project in all_projects %}
-      <div class="tape">
+      <div class="project-stack-item">
         <a {% if page.url contains project.url %}class="disabled"{% endif %} href="{{ project.url | relative_url }}" style="text-decoration: none; display: block;">
             <h3 class="title">{{ project.title }}</h3>
           </a>

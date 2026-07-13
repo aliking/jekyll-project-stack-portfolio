@@ -1,5 +1,6 @@
 ---
 layout: project
+type: vhs
 title: "The Zombie Film After School"
 show_title: true
 
