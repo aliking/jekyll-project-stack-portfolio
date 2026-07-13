@@ -3,10 +3,11 @@
 {% if include.current_url and include.current_url contains stack_project.url %}
   {% assign is_current_project = true %}
 {% endif %}
+{% assign stack_style_class = stack_project.stack_style | default: '' | strip %}
 
 <div class="project-stack-item-row">
   <a class="project-stack-item {% if is_current_project %}disabled{% endif %}" href="{{ stack_project.url | relative_url }}">
-    <div class="project-stack-item-art" aria-hidden="true">
+    <div class="project-stack-item-art{% if stack_style_class != '' %} {{ stack_style_class }}{% endif %}" aria-hidden="true">
       {% include components/sidebar/tape.svg %}
     </div>
     <div class="project-stack-item-label" aria-hidden="true">

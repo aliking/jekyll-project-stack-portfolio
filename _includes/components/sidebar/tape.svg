@@ -15,18 +15,18 @@
     <rect id="bg" x="-348.03" y="-540.85" width="1224.63" height="176.764"
         fill="#252525" rx="21" ry="21" />
     <path id="tabhole" fill="#000" d="M-243.58-455.95h63.673v78.748h-63.673z" />
-    <rect id="tab" x="-235.46" y="-433.93" width="47.428" height="59.515" fill="#2b2b2b" rx="1"
+    <rect id="tab" x="-235.46" y="-433.93" width="47.428" height="59.515" fill="#2b2b2b" style="opacity: var(--tab_unlocked, 1);" rx="1"
         ry="1" />
     <path id="midline" stroke="#000" d="m-375.146-456.012 1278.06-.984" />
     <g filter="url(#weathered-edge)">
     <rect id="label" x="-148.48" y="-524.14" width="962.097" height="144.125" fill="#fff" rx="9"
         ry="9" />
-    <path id="color1" fill="#fff"  d="M106.04-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9H106.04z" transform="scale(-1 1)" />
-    <path id="color2" fill="#fff" d="M63.4-524.28h42.736v144.407H63.4z"  transform="scale(-1 1)" />
-    <path id="color3" fill="#fff" d="M21.3-524.28h42.736v144.407H21.3z"   transform="scale(-1 1)" />
-    <path id="color4" fill="#fff"  d="M770.654-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9h-33.736z" />
-    <path id="color5" fill="#fff" d="M728.006-524.28h42.736v144.407h-42.736z" />
-    <path id="color6" fill="#fff" d="M685.914-524.28h42.736v144.407h-42.736z" />
+    <path id="color1" style="fill: var(--color1, #fff);"  d="M106.04-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9H106.04z" transform="scale(-1 1)" />
+    <path id="color2" style="fill: var(--color2, #fff);" d="M63.4-524.28h42.736v144.407H63.4z"  transform="scale(-1 1)" />
+    <path id="color3" style="fill: var(--color3, #fff);" d="M21.3-524.28h42.736v144.407H21.3z"   transform="scale(-1 1)" />
+    <path id="color4" style="fill: var(--color4, #fff);" d="M685.914-524.28h42.736v144.407h-42.736z" />
+    <path id="color5" style="fill: var(--color5, #fff);" d="M728.006-524.28h42.736v144.407h-42.736z" />
+    <path id="color6" style="fill: var(--color6, #fff);"  d="M770.654-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9h-33.736z" />
     </g>
     <g filter="url(#ink-grain)">
     <rect id="bg" x="-348.03" y="-540.85" width="1224.63" height="176.764"

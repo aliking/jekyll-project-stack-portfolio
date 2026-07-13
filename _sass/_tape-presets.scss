@@ -1,0 +1,14 @@
+// Stack style and color customization.
+/*
+    Name styles as a single word like .tape1
+    In the project .md file set the stack_style to that value (no .) `stack_style: tape1`
+    color1 to color6 are bars on the tape label from left to right
+
+*/
+
+.tape1 {
+  --tab_unlocked: 0; // 0 or 1 to set whether the VHS lock tab is removed
+  --color1: #a86969;
+  --color2: #b8b04f;
+  --color6: #a86969;
+}

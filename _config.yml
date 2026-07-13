@@ -56,6 +56,3 @@ exclude:
 # custom
 project_asset:
   asset_root: assets/project_media
-
-stack_styles:
-  tape1: locked #F00 #F00 #F00 #0F0 #0F0 #0F0
