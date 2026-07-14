@@ -58,6 +58,6 @@ project_asset:
   asset_root: assets/project_media
 
 stack_transform:
-  seed: 42
-  translate_max: 20
+  seed: 69
+  translate_max: 10
   rotate_max: 10

@@ -2,15 +2,12 @@
 layout: project
 type: vhs
 stack_style: tape1
-stack_skew: -20 7
-
-title: "The Zombie Film After School"
-show_title: true
-
+title: "The Zombie Film After Shit"
+show_title: false
 hero: "image.png"
 ---
 
-There's something weird going on at the school.
+There's something weird going on at this school.
 
 
-{% project_asset citizen.png alt="Example of a message posted by the bot as 'Civilian'" %}
+{% fountain script.fountain %}

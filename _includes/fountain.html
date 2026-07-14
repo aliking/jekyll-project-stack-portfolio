@@ -1,0 +1,171 @@
+<style>
+  .script-container {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 600px;
+    overflow-y: scroll;
+    border: dotted #000 2px;
+    background-color: #fff;
+    color: #000;
+    padding: 2rem;
+  }
+
+  .screenplay {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12pt;
+    line-height: 1;
+    -webkit-text-size-adjust: none;
+  }
+
+  .screenplay h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    font-size: inherit;
+    color: #000;
+  }
+
+  .screenplay a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .screenplay p {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .screenplay .underline {
+    text-decoration: underline;
+  }
+
+  .screenplay .title-page {
+    margin: 0 auto 1em;
+  }
+
+  .screenplay .title-page .title {
+    text-align: center;
+  }
+
+  .screenplay .title-page .title h1 {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .screenplay .section-heading {
+    text-align: center;
+  }
+
+  .screenplay .section-heading:hover {
+    background-color: lightyellow;
+  }
+
+  .screenplay .scene {
+    margin-top: 2em;
+  }
+
+  .screenplay .scene-heading {
+    margin-bottom: 0;
+  }
+
+  .screenplay .scene-heading:hover {
+    background-color: lightyellow;
+  }
+
+  .screenplay .action {
+    margin: 1em 0;
+  }
+
+  .screenplay .dialog {
+    width: 75%;
+    max-width: 4in;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 17%;
+  }
+
+  .screenplay .dialog .character {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 25%;
+  }
+
+  .screenplay .dialog .lines {
+    max-width: 3.5in;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .screenplay .dialog .paren {
+    max-width: 2in;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15%;
+    text-indent: -0.6em;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  .screenplay .dual-dialog {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .screenplay .dual-dialog .dialog {
+    max-width: 50%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    float: left;
+    clear: none;
+  }
+
+  .screenplay .dual-dialog .dialog .lines {
+    width: 95%;
+  }
+
+  .screenplay .trans {
+    max-width: 2in;
+    margin-left: 63%;
+    clear: both;
+    page-break-before: avoid;
+  }
+
+  .screenplay .note {
+    display: block;
+    font-size: 11pt;
+    font-family: "Comic Sans MS", "Marker Felt", "sans-serif";
+    line-height: 1.5;
+    background-color: lightgoldenrodyellow;
+    padding: 1em;
+  }
+
+  .screenplay .synopsis {
+    margin-top: 0;
+    color: grey;
+    font-style: italic;
+  }
+
+  .screenplay .center {
+    text-align: center;
+    white-space: pre-wrap;
+  }
+</style>
+
+
+<script type="text/fountain" id="script-source">
+{{ include.script_text }}
+</script>
+
+<div class="script-container screenplay" id="script-output"></div>
+<script type="module">
+  import { Fountain } from 'https://cdn.jsdelivr.net/npm/fountain-js/+esm';
+  const sourceText = document.getElementById('script-source').textContent;
+  const fountain = new Fountain();
+  const result = fountain.parse(sourceText);
+  // Render the generated HTML into the output container
+  document.getElementById('script-output').innerHTML = result.html.script;
+</script>

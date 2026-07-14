@@ -3,7 +3,7 @@
 {% if stack_projects.size > 0 %}
 <div class="project-stack">
   {% for project in stack_projects %}
-    {% stack_row tape project=project current_url=include.current_url %}
+    {% stack_row type=project.type project=project current_url=include.current_url %}
   {% endfor %}
 </div>
 {% else %}
