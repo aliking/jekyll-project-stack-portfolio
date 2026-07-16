@@ -10,4 +10,4 @@ hero: "image.png"
 There's something weird going on at this school.
 
 
-{% fountain script.fountain %}
+{% page_asset fountain script.fountain %}

@@ -54,7 +54,7 @@ exclude:
   - README.md
 
 # custom
-project_asset:
+page_asset:
   asset_root: assets/project_media
 
 stack_transform:

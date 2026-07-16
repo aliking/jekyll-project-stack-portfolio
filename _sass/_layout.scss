@@ -544,9 +544,6 @@
 }
 
 // ── Project gallery ─────────────────────────────────────────
-.project-gallery {
-  margin: $spacing-xl 0;
-}
 
 .project-gallery-grid {
   column-count: 3;
@@ -607,7 +604,6 @@
   width: 100%;
   height: auto;
   display: block;
-  margin: $spacing-xl 0;
   border: 1px solid $border-color;
   border-radius: $radius-md;
   background: $bg-card;

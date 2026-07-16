@@ -1,4 +1,4 @@
-# cameron.kii.ing
+# Project Stack Jekyll Theme
 
 bundle install
 bundle exec jekyll serve --livereload
