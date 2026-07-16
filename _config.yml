@@ -1,9 +1,9 @@
-title: Cameron King
-description: Cameron King portfolio
+title: Firsty LastName
+description: Firsty LastName portfolio
 author: aliking
 email: ""
 baseurl: ""
-url: "https://cameron.kiii.ing"
+url: "https://example.com"
 
 # Build settings
 theme: null
