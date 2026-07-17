@@ -14,8 +14,11 @@ module Jekyll
 
         gallery_asset_root = @asset_path_arg
         images = discover_images(@target_asset_paths)
+        gallery_template = render_template(context, {})
 
-        return empty_state_html(@asset_path_arg) if images.empty?
+        if images.empty?
+          return empty_state_html(@asset_path_arg) + gallery_template
+        end
 
         thumbnails = images.each_with_index.map do |filename, index|
           asset_path = File.join(gallery_asset_root, filename)
@@ -38,7 +41,7 @@ module Jekyll
           HTML
         end
 
-        <<~HTML
+        <<~HTML + gallery_template
           <section class="project-gallery" data-gallery="#{html_escape(@asset_path_arg)}" aria-label="Image gallery">
             <div class="project-gallery-grid">
               #{thumbnails.join("\n")}
