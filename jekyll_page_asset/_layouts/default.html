@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <script>
+    (function () {
+      var storageKey = "site-theme";
+      var savedTheme = localStorage.getItem(storageKey);
+      var initialTheme = savedTheme === "light" || savedTheme === "dark" || savedTheme === "system" ? savedTheme : "light";
+      document.documentElement.setAttribute("data-theme", initialTheme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/site_media/favicon.png' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <div class="site-wrapper">
+    {% include components/sidebar/sidebar.html %}
+    <main class="site-main" id="main-content">
+      {{ content }}
+    </main>
+    <div id="page-asset-gallery-lightbox"></div>
+  </div>
+
+</body>
+</html>

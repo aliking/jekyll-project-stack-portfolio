@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article>
+  <header class="page-header">
+    <div class="header-text-wrapper">
+      {% if page.hero %}
+        {% page_asset image {{page.hero}} %}
+      {% endif %}
+      {% if page.show_title %}
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% endif %}
+      {% if page.description %}
+        <p class="page-desc" style="color: var(--text-secondary, #9898b8); font-size: 1.1rem; margin-top: 0.5rem;">{{ page.description }}</p>
+      {% endif %}
+    </div>
+  </header>
+  <div class="page-content">
+    {{ content }}
+  </div>
+  {% if page.link %}
+  <div style="margin-top: 2rem;">
+    <a href="{{ page.link }}" class="btn btn-outline" target="_blank" rel="noopener">View Project →</a>
+  </div>
+  {% endif %}
+</article>

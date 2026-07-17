@@ -1,0 +1,13 @@
+<script type="text/fountain" id="script-source">
+{{ include.script_text }}
+</script>
+
+<div class="script-container screenplay" id="script-output"></div>
+<script type="module">
+  import { Fountain } from 'https://cdn.jsdelivr.net/npm/fountain-js/+esm';
+  const sourceText = document.getElementById('script-source').textContent;
+  const fountain = new Fountain();
+  const result = fountain.parse(sourceText);
+  // Render the generated HTML into the output container
+  document.getElementById('script-output').innerHTML = result.html.script;
+</script>

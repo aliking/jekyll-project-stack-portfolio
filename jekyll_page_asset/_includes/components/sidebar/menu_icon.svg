@@ -1,0 +1,11 @@
+<svg class="sidebar-menu-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <g class="menu-icon-hamburger">
+    <line class="menu-line" x1="4" y1="7" x2="20" y2="7"></line>
+    <line class="menu-line" x1="4" y1="12" x2="20" y2="12"></line>
+    <line class="menu-line" x1="4" y1="17" x2="20" y2="17"></line>
+  </g>
+  <g class="menu-icon-close">
+    <line class="menu-line" x1="6" y1="6" x2="18" y2="18"></line>
+    <line class="menu-line" x1="18" y1="6" x2="6" y2="18"></line>
+  </g>
+</svg>

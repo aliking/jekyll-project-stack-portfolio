@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="523.6 708 1325 100">
+  <defs>
+    <filter id="notebook-weathered-edge">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+    </filter>
+    <filter id="dirt-alpha-map" x="524.073" y="709.92" width="1279.85" height="98.468" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="lumaAlpha" />
+      <feComponentTransfer in="lumaAlpha" result="invAlpha">
+        <feFuncA type="table" tableValues="1 0" />
+      </feComponentTransfer>
+      <feComponentTransfer in="invAlpha" result="contrastAlpha">
+        <feFuncA type="linear" slope="1.35" intercept="-0.12" />
+      </feComponentTransfer>
+      <feFlood flood-color="#ffffff" result="white" />
+      <feComposite in="white" in2="contrastAlpha" operator="in" />
+    </filter>
+    <mask id="bg-dirt-mask" x="524.073" y="709.92" width="1279.85" height="98.468"
+      maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" style="mask-type: alpha;">
+      <image href="/assets/site_media/noteback.png" x="524.073" y="709.92" width="1279.85" height="98.468"
+        preserveAspectRatio="none" filter="url(#dirt-alpha-map)" />
+    </mask>
+  </defs>
+  <g filter="url(#notebook-weathered-edge)">
+    <rect id="bg" width="1279.85" height="98.468" x="524.073" y="709.92" rx="5" ry="5"
+      fill="var(--notebook-color, #f23131)" />
+    <path id="tophighlight" d="M530.131 708.7h1268.06a5 5 0 0 1 5 5v6.926H525.131V713.7a5 5 0 0 1 5-5Z"
+      fill="#ddd" fill-opacity="0.58" />
+    <path id="bottomhighlight" d="M523.636 795.54h1278.06v3.713H523.636z" fill="#d5d5d5" fill-opacity="0.58" />
+  </g>
+  <rect id="dirt" width="1279.85" height="98.468" x="524.073" y="709.92" rx="5" ry="5"
+    fill="#000" fill-opacity="0.48" mask="url(#bg-dirt-mask)" />
+  <path id="label" d="M615.637 725.21h940.318v64.429H615.637z" fill="var(--label-color, #fff)" />
+  <path id="tape"
+    d="m574.136 710.45 9.476 5.379-7.574 8.135 9.475 5.378-7.574 8.134 9.476 5.378-7.574 8.134 9.476 5.378-7.574 8.135 9.476 5.378-7.573 8.134 9.475 5.378-7.573 8.134 9.475 5.379-7.573 8.135 4.475 3.378 1011.305 1.001-8.33-6.772 7.67-4.772-8.34-6.772 7.67-4.772-8.34-6.772 7.67-4.772-8.34-6.772 7.67-4.772-8.33-6.772 7.66-4.771-8.33-6.772 7.66-4.772-8.33-6.772 7.66-4.772-8.33-6.772 5.97-6.998z"
+    fill="#ccd0c0" fill-opacity="0.5" />
+</svg>
