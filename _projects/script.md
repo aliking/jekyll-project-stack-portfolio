@@ -1,7 +1,7 @@
 ---
 layout: project
 type: vhs
-stack_style: tape1
+stack_style: redtape
 title: "TV spec script"
 show_title: false
 ---

@@ -158,6 +158,109 @@
     }
   }
 
+  //---------decoration text --------
+  .stack-item-text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+  }
+
+  .stack-item-text::after {
+    font-weight: 700;
+  }
+
+  .stack-item-text1--tape,
+  .stack-item-text4--tape {
+    justify-content: start;
+  }
+  .stack-item-text2--tape,
+  .stack-item-text5--tape {
+    justify-content: center;
+  }
+  .stack-item-text3--tape,
+  .stack-item-text6--tape {
+    justify-content: end;
+  }
+
+  .stack-item-text1--tape,
+  .stack-item-text2--tape,
+  .stack-item-text3--tape {
+    left: 17%;
+    right: 73%;
+    top: var(--stack-label-top);
+    bottom: var(--stack-label-bottom);
+  }
+
+  .stack-item-text4--tape,
+  .stack-item-text5--tape,
+  .stack-item-text6--tape {
+    left: 83%;
+    right: 6.5%;
+    top: var(--stack-label-top);
+    bottom: var(--stack-label-bottom);
+  }
+
+  .stack-item-text1--tape::after,
+  .stack-item-text2--tape::after,
+  .stack-item-text3--tape::after,
+  .stack-item-text4--tape::after,
+  .stack-item-text5--tape::after,
+  .stack-item-text6--tape::after {
+        writing-mode: sideways-lr;
+  }
+
+  .stack-item-text1--cd,
+  .stack-item-text2--cd {
+    justify-content: center;
+  }
+  .stack-item-text1--cd {
+    left: 3%;
+    right: 81%;
+    top: var(--stack-label-top);
+    bottom: var(--stack-label-bottom);
+  }
+
+  .stack-item-text2--cd {
+    left: 86%;
+    right: 3%;
+    top: var(--stack-label-top);
+    bottom: var(--stack-label-bottom);
+  }
+
+
+  .stack-item-text1::after {
+    content: var(--text1);
+    font-size: var(--text1_size);
+    color: var(--text1_color);
+  }
+  .stack-item-text2::after {
+    content: var(--text2);
+    font-size: var(--text2_size);
+    color: var(--text2_color);
+  }
+  .stack-item-text3::after {
+    content: var(--text3);
+    font-size: var(--text3_size);
+    color: var(--text3_color);
+  }
+  .stack-item-text4::after {
+    content: var(--text4);
+    font-size: var(--text4_size);
+    color: var(--text4_color);
+  }
+  .stack-item-text5::after {
+    content: var(--text5);
+    font-size: var(--text5_size);
+    color: var(--text5_color);
+  }
+  .stack-item-text6::after {
+    content: var(--text6);
+    font-size: var(--text6_size);
+    color: var(--text6_color);
+  }
+
+
+
   .sidebar-menu-toggle {
     display: none;
     width: 2.5rem;

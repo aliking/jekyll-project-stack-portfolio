@@ -18,13 +18,13 @@
   <g filter="url(#weathered-edge)">
     <rect id="label" x="-148.48" y="-524.14" width="962.097" height="144.125" fill="#fff" rx="9" ry="9"></rect>
   </g>
-  <path id="color1" style="fill: var(--color1, #fff);" d="M106.04-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9H106.04z" transform="scale(-1 1)"></path>
-  <path id="color2" style="fill: var(--color2, #fff); transform-box: fill-box; transform-origin: 50% 50%;" d="M -107.14 -379.87 L -64.4 -379.87 L -64.4 -524.28 L -107.14 -524.28 L -107.14 -379.87 Z" transform="matrix(-1, 0, 0, -1, 0.000016, 0.000003)"></path>
-  <path id="color3" style="fill: var(--color3, #fff); transform-box: fill-box; transform-origin: 50% 50%;" d="M -67 -379.87 L -24.264 -379.87 L -24.264 -524.28 L -67 -524.28 L -67 -379.87 Z" transform="matrix(-1, 0, 0, -1, 0.000005, 0.000003)"></path>
-  <path id="color4" style="fill: var(--color4, #fff);" d="M 687.914 -524.28 L 730.65 -524.28 L 730.65 -379.87 L 687.914 -379.87 L 687.914 -524.28 Z"></path>
-  <path id="color5" style="fill: var(--color5, #fff);" d="M 729.006 -524.28 L 771.742 -524.28 L 771.742 -379.87 L 729.006 -379.87 L 729.006 -524.28 Z"></path>
+  <path id="color1" style="fill: var(--color1, #fff);" d="M-106.04-524.28h-33.736a9 9 0 0 1-9 9v126.407a9 9 0 0 1 9 9H-106.04z"></path>
+  <path id="color2" style="fill: var(--color2, #fff);" d="M -108.14 -379.87 L -65.4 -379.87 L -65.4 -524.28 L -108.14 -524.28 L -108.14 -379.87 Z"></path>
+  <path id="color3" style="fill: var(--color3, #fff);" d="M -69 -379.87 L -26.264 -379.87 L -26.264 -524.28 L -69 -524.28 L -69 -379.87 Z"></path>
+  <path id="color4" style="fill: var(--color4, #fff);" d="M 689.914 -524.28 L 732.65 -524.28 L 732.65 -379.87 L 689.914 -379.87 L 689.914 -524.28 Z"></path>
+  <path id="color5" style="fill: var(--color5, #fff);" d="M 730.006 -524.28 L 772.742 -524.28 L 772.742 -379.87 L 730.006 -379.87 L 730.006 -524.28 Z"></path>
   <path id="color6" style="fill: var(--color6, #fff);" d="M770.654-524.28h33.736a9 9 0 0 1 9 9v126.407a9 9 0 0 1-9 9h-33.736z"></path>
-  <g filter="url(#ink-grain)" transform="matrix(1, 0, 0, 1, 2.395051, 208.665451)">
+  <g filter="url(#ink-grain)" >
     <rect id="bg-2" x="-348.03" y="-540.85" width="1224.63" height="176.764" style="fill-opacity:.1;fill:#777" rx="21" ry="21"></rect>
   </g>
 </svg>

@@ -115,3 +115,5 @@ title: "Project One"
 }
 ```
 ![alt text](image-1.png)
+
+Tape and cd also have additional style variables for extra decorative text on the label. see `_sass/_stack-presets.custom.scss` for some examples

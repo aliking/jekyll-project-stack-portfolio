@@ -76,7 +76,13 @@ module Jekyll
           <a class="#{link_class}" style="transform: translateX(#{translate_x}px);" href="#{href}">
             <div class="#{art_class}" aria-hidden="true">
               #{stack_svg}
-            </div>
+              <div class="stack-item-text stack-item-text1 stack-item-text1--#{stack_type}"></div>
+              <div class="stack-item-text stack-item-text2 stack-item-text2--#{stack_type}"></div>
+              <div class="stack-item-text stack-item-text3 stack-item-text3--#{stack_type}"></div>
+              <div class="stack-item-text stack-item-text4 stack-item-text4--#{stack_type}"></div>
+              <div class="stack-item-text stack-item-text5 stack-item-text5--#{stack_type}"></div>
+              <div class="stack-item-text stack-item-text6 stack-item-text6--#{stack_type}"></div>
+              </div>
             <div class="project-stack-item-label" aria-hidden="true">
               <svg viewBox="0 0 500 50" width="100%" role="presentation" focusable="false">
                 <text x="0" y="40" font-size="40" font-weight="700" textLength="100%" lengthAdjust="spacingAndGlyphs">#{title}</text>

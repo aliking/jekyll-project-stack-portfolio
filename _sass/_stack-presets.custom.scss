@@ -3,3 +3,36 @@
 // In a site using this theme gem, add `_sass/_stack-presets.custom.scss`
 // to extend or override the default stack preset classes without copying
 // the entire `_stack-presets.scss` file.
+.redtape {
+  --tab_unlocked: 0;
+  --color1: #be2c2c;
+  --color6: #be2c2c;
+  --color2: #ead4d4;
+
+
+  --text1: "VCR";
+  --text1_color: #ead4d4;
+  --text1_size: 10px;
+
+  --text2: "CASSETTE";
+  --text2_color: #be2c2c;
+  --text2_size: 8px;
+
+  --text6: "HI-DEF";
+  --text6_color: #ebf3dd;
+  --text6_size: 11px;
+}
+
+.bluecd {
+  --tab_unlocked: 0;
+  --color1: #28319c;
+  --color2: #28319c;
+
+  --text1: "60MIN";
+  --text1_color: #ffffff;
+  --text1_size: 13px;
+
+  --text2: "EMI";
+  --text2_color: #ffffff;
+  --text2_size: 14px;
+}
