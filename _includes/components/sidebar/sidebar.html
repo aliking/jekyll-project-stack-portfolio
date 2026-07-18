@@ -1,0 +1,83 @@
+<aside class="site-sidebar" id="site-sidebar" data-menu-open="false">
+  <header class="sidebar-header">
+    <div class="sidebar-name">
+      <a
+      {% if page.url contains '/about' or page.url contains 'projects' %}
+        href="{{ '/' | relative_url }}"
+      {% else %}
+        href="{{ '/about' | relative_url }}" style="cursor:help"
+      {% endif %}>
+        <h1>{{ site.title }}</h1>
+      </a>
+    </div>
+
+    <button
+      class="sidebar-menu-toggle"
+      id="sidebar-menu-toggle"
+      type="button"
+      aria-controls="sidebar-menu-content"
+      aria-expanded="false"
+      aria-label="Open menu">
+      {% include components/sidebar/menu_icon.svg %}
+    </button>
+  </header>
+
+  <div class="sidebar-menu-content" id="sidebar-menu-content">
+    {% include components/sidebar/project-stack.html projects=site.projects current_url=page.url %}
+  </div>
+  {% include components/sidebar/footer.html %}
+</aside>
+
+<script>
+  (function () {
+    var mobileQuery = window.matchMedia("(max-width: 800px)");
+    var sidebar = document.getElementById("site-sidebar");
+    var toggle = document.getElementById("sidebar-menu-toggle");
+
+    if (!sidebar || !toggle) {
+      return;
+    }
+
+    function setOpenState(isOpen) {
+      sidebar.setAttribute("data-menu-open", isOpen ? "true" : "false");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      document.body.classList.toggle("sidebar-menu-open", isOpen && mobileQuery.matches);
+    }
+
+    function closeOnDesktop() {
+      if (!mobileQuery.matches) {
+        setOpenState(false);
+      }
+    }
+
+    toggle.addEventListener("click", function () {
+      var currentlyOpen = sidebar.getAttribute("data-menu-open") === "true";
+      setOpenState(!currentlyOpen);
+    });
+
+    sidebar.addEventListener("click", function (event) {
+      if (!mobileQuery.matches || sidebar.getAttribute("data-menu-open") !== "true") {
+        return;
+      }
+
+      if (event.target.closest("a")) {
+        setOpenState(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && sidebar.getAttribute("data-menu-open") === "true") {
+        setOpenState(false);
+      }
+    });
+
+    if (typeof mobileQuery.addEventListener === "function") {
+      mobileQuery.addEventListener("change", closeOnDesktop);
+    } else if (typeof mobileQuery.addListener === "function") {
+      mobileQuery.addListener(closeOnDesktop);
+    }
+
+    setOpenState(false);
+  })();
+</script>

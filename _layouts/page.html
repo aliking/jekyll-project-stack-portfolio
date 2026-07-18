@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="page-header">
+    <div class="header-text-wrapper">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="page-desc">{{ page.description }}</p>
+      {% endif %}
+    </div>
+    {% if page.image %}
+      <div class="header-image-wrapper">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" style="height: 300px; width: auto;">
+      </div>
+    {% endif %}
+  </header>
+  <div class="page-content">
+    {{ content }}
+  </div>
+</article>
