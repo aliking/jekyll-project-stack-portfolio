@@ -5,10 +5,3 @@
 @use "layout" as *;
 @use "stack-presets" as *;
 @use "stack-presets.custom" as *;
-
-:root {
-    	--bg-wallpaper: url({{ 'assets/site_media/lightwall.png' | relative_url }});
-}
-:root[data-theme="dark"] {
-    	--bg-wallpaper: url({{ 'assets/site_media/darkwall.jpg' | relative_url }});
-}

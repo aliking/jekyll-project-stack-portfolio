@@ -4,6 +4,7 @@
 
 :root {
 	color-scheme: light;
+	--bg-wallpaper: url("../site_media/lightwall.png");
 
 	// Light mode defaults
 	--bg-deep: #f4f6fb;
@@ -41,6 +42,7 @@
 
 :root[data-theme="dark"] {
 	color-scheme: dark;
+	--bg-wallpaper: url("../site_media/darkwall.jpg");
 
 	--bg-deep: #0d0d1a;
 	--bg-mid: #12122b;
@@ -72,41 +74,7 @@
 	--shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
-:root[data-theme="system"] {
-	color-scheme: light dark;
-}
 
-@media (prefers-color-scheme: dark) {
-	:root[data-theme="system"] {
-		--bg-deep: #0d0d1a;
-		--bg-mid: #12122b;
-		--bg-card: #1a1a35;
-		--bg-card-hover: #20203f;
-
-		--accent-purple: #b57bee;
-		--accent-teal: #4ecdc4;
-		--accent-pink: #ff6b9d;
-		--accent-yellow: #ffd166;
-
-		--text-primary: #e8e8f0;
-		--text-secondary: #9898b8;
-		--text-muted: #5a5a7a;
-
-		--border-color: #2a2a4a;
-
-		--sidebar-bg: rgba(13, 13, 26, 0.85);
-		--row-even-bg: rgba(255, 255, 255, 0.02);
-		--selection-bg: rgba(181, 123, 238, 0.3);
-
-		--accent-purple-hover: #c692f1;
-		--accent-purple-soft: rgba(181, 123, 238, 0.4);
-		--accent-teal-soft: rgba(78, 205, 196, 0.1);
-
-		--glow-purple: 0 0 20px rgba(181, 123, 238, 0.25);
-		--glow-teal: 0 0 20px rgba(78, 205, 196, 0.25);
-		--shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
-	}
-}
 
 // Colors
 $bg-deep:        var(--bg-deep);

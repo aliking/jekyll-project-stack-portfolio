@@ -1,7 +1,9 @@
 ## Run demo site locally
-
+```
 bundle install
 bundle exec jekyll serve --livereload
+```
+![alt text](image-2.png)
 
 # jekyll-project-stack-portfolio
 
