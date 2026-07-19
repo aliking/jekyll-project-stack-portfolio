@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Retro portfolio theme for Jekyll"
   spec.description   = "Provides layouts, includes, styles, assets for a project portfolio theme."
   spec.homepage      = "https://example.com"
-  spec.license       = "MIT"
+  spec.license       = "GPL-3.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
