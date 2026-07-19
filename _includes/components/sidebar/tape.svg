@@ -18,7 +18,7 @@
   <g filter="url(#weathered-edge)">
     <rect id="label" x="-148.48" y="-524.14" width="962.097" height="144.125" fill="#fff" rx="9" ry="9"></rect>
   </g>
-  <path id="color1" style="fill: var(--color1, #fff);" d="M-106.04-524.28h-33.736a9 9 0 0 1-9 9v126.407a9 9 0 0 1 9 9H-106.04z"></path>
+  <path id="color1" style="fill: var(--color1, #fff);" d="M-106.04-524.28h-33.736a9 9 0 0 0-9 9v126.407a9 9 0 0 0 9 9H-106.04z"></path>
   <path id="color2" style="fill: var(--color2, #fff);" d="M -108.14 -379.87 L -65.4 -379.87 L -65.4 -524.28 L -108.14 -524.28 L -108.14 -379.87 Z"></path>
   <path id="color3" style="fill: var(--color3, #fff);" d="M -69 -379.87 L -26.264 -379.87 L -26.264 -524.28 L -69 -524.28 L -69 -379.87 Z"></path>
   <path id="color4" style="fill: var(--color4, #fff);" d="M 689.914 -524.28 L 732.65 -524.28 L 732.65 -379.87 L 689.914 -379.87 L 689.914 -524.28 Z"></path>

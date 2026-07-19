@@ -21,7 +21,7 @@
   height: 100vh;
   z-index: 100;
   width: $sidebar-width;
-  background: $sidebar-bg;
+  background-image: var(--bg-wallpaper);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,16 +35,20 @@
     align-items: center;
 
     a {
-      color: $text-primary;
       text-decoration: none;
     }
 
     h1 {
+      color: #191919;
       font-family: $font-mono;
       font-size: $font-size-3xl;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin: 0;
+      padding: $spacing-sm;
+      background: #cfcec9;
+      border: double black 1px;
+      border-radius: $radius-md;
+      transform: rotate(3deg);
     }
 
     &:hover a {
@@ -156,6 +160,28 @@
       fill: #191919;
       font-family: $font-mono;
     }
+  }
+
+  .shelf {
+    background-image: url('../site_media/shelf.png');
+    height: 40px;
+    border-radius: 15px;
+    padding: 1px;
+    box-shadow: inset -6px -6px 12px hsl(33 56% 18% / 1), inset 6px 6px 12px #eacfae;
+  }
+
+  .brackets {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bracket {
+    background: url('../site_media/shelf.png');
+    height: 60px;
+    width: 30px;
+    margin: 0 40px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: inset -6px -6px 12px hsl(33 56% 18% / 1), inset 6px 6px 12px hsl(33 59% 10% / 1);
   }
 
   //---------decoration text --------
